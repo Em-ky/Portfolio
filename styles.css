@@ -1,0 +1,229 @@
+/* Base styles — black & white premium theme */
+:root{
+  --bg:#0b0b0b; --panel:#0f0f10; --muted:#bfc3c6; --accent:#ffffff; --glass:rgba(255,255,255,0.04);
+  --radius:14px; --container:1200px; --transition:300ms;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Poppins',system-ui,Helvetica,Arial; background:linear-gradient(180deg,#0b0b0b 0%, #0f0f10 60%);color:var(--accent);}
+/* smooth scroll for in-page navigation */
+html{scroll-behavior:smooth}
+.container{max-width:var(--container);margin:0 auto;padding:2rem;}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.site-header{position:sticky;top:0;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{font-family:'Montserrat';font-weight:700;font-size:1.1rem}
+.nav-list{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+.nav-list a{padding:.5rem .75rem;border-radius:8px;transition:var(--transition)}
+.nav-list a:hover{background:var(--glass)}
+.nav-toggle{display:none;background:none;border:0;color:var(--accent)}
+
+.hero{padding:0}
+.hero-viewport{min-height:100vh;display:flex;align-items:center}
+.tour-hero{min-height:78vh}
+.hero-inner{display:flex;gap:2rem;align-items:center;justify-content:space-between}
+.brand-heading{font-family:'Montserrat';font-weight:700;font-size:2.25rem;margin:0}
+.lead{color:var(--muted);margin-top:.5rem}
+/* typed name below hero heading */
+.hero-name{margin-top:.8rem;font-size:1.05rem;color:var(--muted);min-height:28px}
+.hero-name #typed-name{color:var(--accent);font-weight:700;font-size:2.6rem;display:inline-block}
+.hero-name small{display:block;color:var(--muted);font-weight:400;font-size:0.9rem;margin-top:6px}
+.hero-name::after{content:""}
+
+/* page transition fade */
+body.page-fade-enter{opacity:0}
+body.page-fade-exit{opacity:0;transition:opacity .42s ease}
+body{transition:opacity .42s ease}
+.btn{display:inline-block;padding:.65rem 1rem;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent);transition:all 220ms}
+.btn-primary{background:var(--accent);color:#0b0b0b;border:none}
+.profile-wrap{width:320px;height:320px;border-radius:20px;background:linear-gradient(180deg,#111111,#0b0b0b);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 30px rgba(0,0,0,0.6);}
+.profile-img{width:88%;border-radius:12px;border:6px solid rgba(255,255,255,0.03)}
+
+.section{padding:3.5rem 0}
+.section h2{font-family:'Montserrat';font-weight:600;margin:0 0 1rem}
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:2rem;align-items:start}
+.logos{display:flex;gap:.6rem;flex-wrap:wrap}
+.logo-btn{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:.5rem;border-radius:10px}
+.logo-btn img{width:64px;height:36px;object-fit:contain;filter:grayscale(1) brightness(.95)}
+
+/* Itinerary center / highlight */
+.itinerary-center{text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem}
+.highlight-main .journal-btn{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:0;border:0;display:inline-block;cursor:pointer;box-shadow:0 12px 40px rgba(0,0,0,0.6)}
+.highlight-main .journal-btn img{width:420px;max-width:92vw;height:auto;display:block;border-radius:10px}
+.highlight-caption{padding:.6rem 0;color:var(--muted);font-weight:600}
+
+/* Itinerary company cards */
+.itinerary-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,220px));gap:1rem;justify-content:center;align-items:start}
+.itinerary-card{appearance:none;border:0;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:.6rem;cursor:pointer;min-height:150px;transition:transform .28s ease,box-shadow .28s ease,border-color .28s}
+.itinerary-card img{width:110p;height:h150;object-fit:t-cover;border-radius:8px;background:#fbfbf7;padding:6px;b);transition:transform .28s ease,filter .28s}
+.itinerary-card .card-title{display:block;color:var(--muted);font-weight:600;margin-top:6px;text-align:center}
+.itinerary-card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,0.6);filter:grayscale(0)}
+.itinerary-card:focus{outline:3px solid rgba(255,255,255,0.06);outline-offset:4px;transform:translateY(-4px)}
+.itinerary-card:active{transform:translateY(-2px)}
+
+@media(max-width:520px){
+  .itinerary-card img{width:72px;height:72px}
+}
+
+@media(max-width:900px){
+  .highlight-main .journal-btn img{width:320px}
+}
+
+.skills-carousel{display:flex;align-items:center;gap:1rem;position:relative;padding:0.75rem 0;overflow:hidden}
+.skills-track{display:flex;gap:1rem;flex-wrap:nowrap;overflow:visible;scroll-behavior:smooth;will-change:transform;padding:0.5rem 0}
+.skill-item{min-width:220px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transform:translateZ(0);min-height:110px}
+.skill-item{min-width:220px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:1rem;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;transform:translateZ(0)}
+.skill-item i{font-size:1.6rem}
+.skill-item span{margin-top:.25rem;color:var(--accent);font-weight:600}
+.carousel-control{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--accent);padding:.4rem .6rem;border-radius:8px}
+
+/* Preloader */
+.preloader{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#0b0b0b;z-index:9999;transition:opacity .4s ease,visibility .4s ease}
+.preloader.loaded{opacity:0;visibility:hidden}
+.preloader .spinner{width:56px;height:56px;border-radius:50%;box-shadow:inset 0 0 0 4px rgba(255,255,255,0.04);position:relative}
+.preloader .spinner:after{content:"";position:absolute;inset:6px;border-radius:50%;border:3px solid rgba(255,255,255,0.08);border-top-color:var(--accent);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Airplane preloader */
+.preloader .plane{width:72px;height:72px;color:var(--accent);display:flex;align-items:center;justify-content:center}
+.preloader .plane svg{display:block;transform-origin:center;animation:plane-loop 1.2s ease-in-out infinite}
+@keyframes plane-loop{
+  0%{transform:translateY(0) rotate(0deg) scale(1)}
+  25%{transform:translateY(-8px) rotate(-6deg) scale(1.02)}
+  50%{transform:translateY(0) rotate(0deg) scale(1)}
+  75%{transform:translateY(-6px) rotate(6deg) scale(1.02)}
+  100%{transform:translateY(0) rotate(0deg) scale(1)}
+}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(12px);transition:opacity .6s cubic-bezier(.2,.9,.2,1),transform .6s cubic-bezier(.2,.9,.2,1)}
+.reveal.active{opacity:1;transform:none}
+
+/* Directional reveal helpers */
+.reveal--up{transform:translateY(24px)}
+.reveal--down{transform:translateY(-18px)}
+.reveal--left{transform:translateX(-24px)}
+.reveal--right{transform:translateX(24px)}
+.reveal.fade-only{transform:none}
+
+/* When active, clear transforms (handled by .reveal.active) */
+.reveal.active.reveal--left,.reveal.active.reveal--right,.reveal.active.reveal--up,.reveal.active.reveal--down{transform:none}
+
+/* Subtle staggered children */
+[data-stagger] > *{opacity:0;transform:translateY(12px);transition:opacity .52s ease, transform .52s ease}
+[data-stagger].active > *{opacity:1;transform:none}
+
+/* Center certificate grid */
+.cert-grid{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+
+/* Make sure certificate card aligns center and doesn't overflow */
+.cert-card{max-width:720px;margin:0 auto}
+
+/* Certificates subtle hover */
+.cert-card{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px;min-width:200px;text-align:center;transition:transform .36s ease,box-shadow .36s ease}
+.cert-card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,0.6)}
+
+/* Make certificate images more modest on page and in cards */
+.cert-card img{display:block;margin:0 auto;max-width:640px;width:100%;height:auto;border-radius:6px;box-shadow:0 8px 28px rgba(0,0,0,0.6)}
+
+/* Tours slider */
+.tour-slider{position:absolute;left:50%;transform:translateX(-50%);bottom:-72px;width:min(960px,92%);max-width:1120px;padding:12px;border-radius:14px;background:linear-gradient(180deg,rgba(10,10,10,0.6),rgba(6,6,6,0.45));box-shadow:0 30px 80px rgba(0,0,0,0.6);z-index:12;backdrop-filter:blur(6px)}
+.tour-slider .slider-viewport{overflow:visible;padding:6px}
+.slider-track{display:flex;gap:1rem;align-items:center;transition:transform .6s cubic-bezier(.2,.9,.2,1);will-change:transform}
+.slide{width:340px;border-radius:12px;overflow:hidden;flex-shrink:0;transition:transform .5s ease,opacity .4s ease}
+.slide img{width:100%;height:220px;object-fit:cover;display:block}
+.slide.inactive{opacity:.45;transform:scale(.92)}
+.slide.active{transform:translateY(-8px) scale(1.03);box-shadow:0 20px 50px rgba(0,0,0,0.5)}
+.slider-nav{position:absolute;top:50%;transform:translateY(-50%);left:12px;display:flex;gap:8px}
+.slider-nav.prev,.slider-nav.next{background:rgba(255,255,255,0.06);border:0;color:var(--accent);padding:.45rem .65rem;border-radius:10px}
+.slider-nav.next{right:12px;left:auto}
+.slider-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
+.slider-dots button{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.06);border:0}
+.slider-dots button.active{background:var(--accent)}
+
+@media(max-width:900px){
+  .slide{width:240px}
+  .slide img{height:160px}
+  .tour-slider{position:relative;bottom:0;width:100%;transform:none;padding:10px;margin-top:-6px}
+}
+
+/* Gallery main showcase */
+.gallery-showcase{display:flex;flex-direction:column;gap:1rem}
+.gallery-main{height:420px;border-radius:12px;overflow:hidden;position:relative;background:#070707;background-size:cover;background-position:center}
+.gallery-main .bg-layer{position:absolute;inset:0;background-size:cover;background-position:center;transition:opacity .6s ease,transform .6s ease;opacity:0}
+.gallery-main .bg-layer.visible{opacity:1}
+.gallery-main::after{content:"";position:absolute;inset:0;box-shadow:inset 0 -60px 120px rgba(0,0,0,0.2);pointer-events:none}
+
+@media(max-width:900px){
+  .gallery-main{height:300px}
+}
+
+.tours-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1rem}
+.tour-card{background:#0c0c0c;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);transition:transform 320ms, box-shadow 320ms}
+.tour-card:hover{transform:translateY(-6px);box-shadow:0 14px 40px rgba(0,0,0,0.6)}
+.tour-card img{width:100%;height:160px;object-fit:cover}
+.tour-body{padding:1rem}
+.tour-body h3{margin:.2rem 0}
+.timeline{margin-top:1rem}
+.timeline-track{display:flex;gap:1rem;align-items:center}
+.timeline-dot{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.03);cursor:pointer}
+.timeline-dot.active{background:var(--accent);color:#0b0b0b}
+
+.cert-grid{display:flex;gap:1rem;flex-wrap:wrap}
+.cert-card{background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px;min-width:200px;text-align:center}
+
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.6rem}
+.gallery-item{border:0;background:none;padding:0;border-radius:9px;overflow:hidden}
+.gallery-item img{display:block;transition:transform 300ms}
+.gallery-item:hover img{transform:scale(1.03)}
+
+.site-footer{padding:2rem;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+/* legacy overlay & custom modal (renamed to avoid overriding Bootstrap's modal) */
+.site-overlay{position:fixed;inset:0;background:rgba(2,2,2,0.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);z-index:40}
+.site-modal{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(880px,95%);background:linear-gradient(180deg,#0b0b0b,#0f0f10);padding:1.2rem;border-radius:12px;z-index:50;color:var(--accent);}
+
+/* Reduce Bootstrap modal-lg max width for a smaller modal appearance */
+.modal-dialog.modal-lg{max-width:760px}
+
+/* Company card layout and logo sizing to keep cards aligned */
+.company-card{background:rgba(255,255,255,0.03);border-radius:12px;border:1px solid rgba(255,255,255,0.04);padding:1rem;display:flex;align-items:center;justify-content:center;height:220px;transition:transform .28s ease,box-shadow .28s}
+.company-card img{max-width:85%;max-height:160px;object-fit:contain;background:#fff;padding:12px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.45)}
+.company-card:active,.company-card:focus{transform:translateY(-4px)}
+@media(max-width:900px){
+  .company-card{height:160px}
+  .company-card img{max-width:70%;max-height:120px}
+}
+
+/* Make bootstrap columns stretch so company cards align in rows */
+.row.g-4.justify-content-center > .col-md-4{display:flex}
+.row.g-4.justify-content-center > .col-md-4 > .company-card{flex:1}
+
+/* Hardware acceleration hints */
+.skill-item,.tour-card,.gallery-item{will-change:transform,opacity}
+
+/* particles */
+#particles{position:fixed;inset:0;z-index:1;pointer-events:none}
+
+/* responsive */
+@media(max-width:900px){
+  .hero-inner{flex-direction:column;align-items:center;text-align:center}
+  .profile-wrap{width:220px;height:220px;margin:0 auto}
+  .about-grid{grid-template-columns:1fr}
+}
+
+/* small interactions */
+button{cursor:pointer}
+:focus{outline:3px solid rgba(255,255,255,0.06);outline-offset:2px}
+
+/* Mobile profile avatar positioned above the name */
+.name-wrap{position:relative}
+.mobile-profile{position:absolute;top:-44px;left:50%;transform:translateX(-50%);width:86px;height:86px;padding:0;border-radius:50%;overflow:hidden;border:3px solid rgba(255,255,255,0.08);box-shadow:0 10px 30px rgba(0,0,0,0.6);z-index:30;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent)}
+.mobile-profile-img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* Ensure avatar sits above the name within the hero and does not overlap the header */
+.name-wrap{display:inline-block}
+
+@media(min-width:992px){
+  .mobile-profile{display:none}
+}

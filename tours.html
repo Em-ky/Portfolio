@@ -1,97 +1,463 @@
-<!doctype html>
+ <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cebu–Bohol Tour — Lauronal (backup 2025-12-15)</title>
+  <title>Cebu–Bohol IT Industry Tour — Lauronal</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Shared Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div id="preloader" class="preloader" aria-hidden="false">
-    <div class="plane" aria-hidden="true">
-      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M2 12l20-8-6 8 6 8L2 12z" fill="currentColor" />
-      </svg>
+
+<div id="preloader" class="preloader" aria-hidden="false">
+  <div class="spinner" aria-hidden="true"></div>
+</div>
+
+<div id="particles" aria-hidden="true"></div>
+
+<!-- HEADER / NAV -->
+<header class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html">Lauronal</a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="tours.html">Tours</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#certs">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero hero-viewport tour-hero d-flex align-items-center text-center">
+  <div class="container">
+    <h1 class="brand-heading">Cebu–Bohol IT Industry Tour</h1>
+    <p class="lead">
+      A 4-day educational tour featuring IT company visits, industry talks,
+      hands-on learning, and professional networking experiences.
+    </p>
+    <a href="#companies" class="btn btn-primary mt-3">View Partner Companies</a>
+  </div>
+</section>
+
+<!-- COMPANIES -->
+<section id="companies" class="section reveal">
+  <div class="container">
+    <h2 class="text-center">Journal</h2>
+    
+
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-4 col-sm-6">
+        <button class="company-card card p-3 w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#companyModal1">
+          <div class="d-flex align-items-center gap-3">
+            <img src="../wordtech.png" alt="Company logo">
+            
+          </div>
+        </button>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <button class="company-card card p-3 w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#companyModal2">
+          <div class="d-flex align-items-center gap-3">
+            <img src="../codechum.png" alt="Company logo">
+          </div>
+        </button>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <button class="company-card card p-3 w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#companyModal3">
+          <div class="d-flex align-items-center gap-3">
+            <img src="../rivant.png" alt="Company logo">
+            
+          </div>
+        </button>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <button class="company-card card p-3 w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#companyModal4">
+          <div class="d-flex align-items-center gap-3">
+            <img src="../mata.png" alt="Company logo">
+           
+          </div>
+        </button>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <button class="company-card card p-3 w-100"
+          data-bs-toggle="modal"
+          data-bs-target="#companyModal5">
+          <div class="d-flex align-items-center gap-3">
+            <img src="../tarsier.png" alt="Company logo">
+            
+          </div>
+        </button>
+      </div>
+
     </div>
   </div>
-  <div id="particles" aria-hidden="true"></div>
-  <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-      <div class="container">
-        <a class="navbar-brand brand" href="index.html">Lauronal</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link active" href="tours.html">Tours</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#gallery">Gallery</a></li>
-          </ul>
-        </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section reveal">
+  <div class="container">
+    <h2 class="text-center">Tour Gallery</h2>
+    <p class="muted text-center mb-4">Documentation and highlights from the tour.</p>
+
+    <div class="gallery-grid">
+      <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal1" aria-label="Open gallery image 1">
+        <img src="assets/images/pic1.png" alt="Harbor operations" class="rounded-2">
+      </button>
+      <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal2" aria-label="Open gallery image 2">
+        <img src="assets/images/pic2.png" alt="Team presentation" class="rounded-2">
+      </button>
+      <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal3" aria-label="Open gallery image 3">
+        <img src="assets/images/pic3.png" alt="Design workshop" class="rounded-2">
+      </button>
+      <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal5" aria-label="Open gallery image 4">
+        <img src="assets/images/pic4.png" alt="Cloud lab" class="rounded-2">
+      </button>
+       <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal6" aria-label="Open gallery image 4">
+        <img src="assets/images/pic5.png" alt="Cloud lab" class="rounded-2">
+      </button>
+       <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal7" aria-label="Open gallery image 4">
+        <img src="assets/images/pic6.png" alt="Cloud lab" class="rounded-2">
+      </button>
+      <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal7" aria-label="Open gallery image 4">
+        <img src="assets/images/pic7.png" alt="Cloud lab" class="rounded-2">
+      </button>
+      <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal8" aria-label="Open gallery image 4">
+        <img src="assets/images/pic8.png" alt="Cloud lab" class="rounded-2">
+      </button>
+      <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal9" aria-label="Open gallery image 4">
+        <img src="assets/images/pic9.png" alt="Cloud lab" class="rounded-2">
+      </button>
+        <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModal0" aria-label="Open gallery image 4">
+        <img src="assets/images/pic10.png" alt="Cloud lab" class="rounded-2">
+      </button>
+       </button>
+        <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModa11" aria-label="Open gallery image 4">
+        <img src="assets/images/pic11.png" alt="Cloud lab" class="rounded-2">
+      </button>
+       </button>
+        <button class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#galleryModa12" aria-label="Open gallery image 4">
+        <img src="assets/images/pic12.png" alt="Cloud lab" class="rounded-2">
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    © <span id="year"></span> Lauronal — All rights reserved.
+  </div>
+</footer>
+
+<!-- ================= MODALS (ONE TYPE ONLY) ================= -->
+
+<!-- MODAL 1 -->
+<div class="modal fade" id="companyModal1" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold">WorldTech</h5>
+        <button type="button" class="btn-close btn-close-white"
+          data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </nav>
-  </header>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/word.png" class="img-fluid rounded-3 mb-4" alt="WorldTech">
+        <p class="text-secondary small mb-2">Day 1 • Cebu • WorldTech</p>
+        <p>
+          WorldTech Cebu is an IT solutions company focused on cloud infrastructure, scalable systems, and modern software development practices.
+        </p>
 
-  <main>
-    <section class="hero hero-viewport tour-hero d-flex align-items-center" aria-label="Cebu Bohol Tour hero">
-      <div class="container text-center">
-        <h1 class="brand-heading">Cebu–Bohol Tour</h1>
-        <p class="lead">A curated 3‑day IT workshop and 1‑day hackathon — learning, labs, and networking.</p>
-        <div class="mt-3">
-          <a class="btn btn-primary me-2" href="#itinerary">Itinerary</a>
-        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</div>
 
-    <section id="itinerary" class="section">
-      <div class="container">
-        <h2>Interactive Highlights</h2>
-        <p class="muted">Click a company/partner to learn more (modal overlays).</p>
-        <div class="logos mt-3 d-flex gap-3 flex-wrap">
-          <button class="logo-btn" data-company="1" aria-haspopup="dialog">Partner 1</button>
-          <button class="logo-btn" data-company="2" aria-haspopup="dialog">Partner 2</button>
-          <button class="logo-btn" data-company="3" aria-haspopup="dialog">Partner 3</button>
-          <button class="logo-btn" data-company="4" aria-haspopup="dialog">Partner 4</button>
-        </div>
+<!-- MODAL 2 -->
+<div class="modal fade" id="companyModal2" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold">CodeChum</h5>
+        <button type="button" class="btn-close btn-close-white"
+          data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </section>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/code.png" class="img-fluid rounded-3 mb-4" alt="CodeChum">
+        <p class="text-secondary small mb-2">Day 2 • Cebu • CodeChum</p>
+        <p>
+          CodeChum focuses on programming education and hands-on coding platforms that help students build strong problem-solving and software development skills.
+        </p>
 
-    <!-- Replaced large gallery showcase with a simple 10-image grid gallery -->
-    <section id="galleryGrid" class="section">
-      <div class="container">
-        <h2>Gallery</h2>
-        <p class="muted">Selected highlights from the tour.</p>
-        <div class="gallery-grid" aria-hidden="false">
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1505765052285-8b67d8fb2f28?auto=format&fit=crop&w=800&q=60" alt="Gallery 1"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=60" alt="Gallery 2"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=60" alt="Gallery 3"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=60" alt="Gallery 4"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1493550943897-8b0ffb0abf0d?auto=format&fit=crop&w=800&q=60" alt="Gallery 5"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60" alt="Gallery 6"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" alt="Gallery 7"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1493550943897-7c6d3c9a7a80?auto=format&fit=crop&w=800&q=60" alt="Gallery 8"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=60" alt="Gallery 9"></div>
-          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1507525428034-c3fb1d1b5b74?auto=format&fit=crop&w=800&q=60" alt="Gallery 10"></div>
-        </div>
       </div>
-    </section>
+    </div>
+  </div>
+</div>
 
-  </main>
+<!-- MODAL 3 -->
+<div class="modal fade" id="companyModal3" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold">Rivant IT Cebu</h5>
+        <button type="button" class="btn-close btn-close-white"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/rivan.png" class="img-fluid rounded-3 mb-4" alt="Rivant">
+        <p class="text-secondary small mb-2">Day 3 • Cebu • Rivant IT</p>
+        <p>
+          Rivant IT specializes in networking solutions, system infrastructure, and IT support, ensuring secure and reliable connectivity for organizations.
+        </p>
 
-  <footer class="site-footer">
-    <div class="container">© <span id="year"></span> Lauronal — All rights reserved.</div>
-  </footer>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <div id="overlay" class="overlay" hidden></div>
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true"></div>
+<!-- MODAL 4 -->
+<div class="modal fade" id="companyModal4" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold">Mata Technologies</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/mata.png" class="img-fluid rounded-3 mb-4" alt="Mata Technologies">
+        <p class="text-secondary small mb-2">Day 4 • Cebu • Mata Technologies</p>
+        <p>
+          Mata Technologies 360 specializes in immersive digital experiences and product integrations that support training and visualization workflows.
+        </p>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
-  <script src="script.js" defer></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 5 -->
+<div class="modal fade" id="companyModal5" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold">T.A.R.S.I.E.R 117</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/tarsier117.png" class="img-fluid rounded-3 mb-4" alt="Tarsier 117">
+        <p class="text-secondary small mb-2">Day 5 • Cebu • T.A.R.S.I.E.R 117</p>
+        <p>
+          T.A.R.S.I.E.R 117 provides emergency response systems and monitoring solutions used in public safety and disaster response contexts.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY MODALS -->
+<div class="modal fade" id="galleryModal1" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal1Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal1Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic1.png" class="img-fluid rounded-3 mb-3" alt="Harbor operations">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="galleryModal2" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal2Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal2Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic2.png" class="img-fluid rounded-3 mb-3" alt="Team presentation">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="galleryModal3" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal3Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal3Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic3.png" class="img-fluid rounded-3 mb-3" alt="Design workshop">
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="galleryModal5" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal4Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal4Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic4.png" class="img-fluid rounded-3 mb-3" alt="Cloud lab">
+      
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="galleryModal6" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal4Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal4Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic5.png" class="img-fluid rounded-3 mb-3" alt="Cloud lab">
+     
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="galleryModal7" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal4Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal4Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic7.png" class="img-fluid rounded-3 mb-3" alt="Cloud lab">
+       
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="galleryModal8" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal4Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal4Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic8.png" class="img-fluid rounded-3 mb-3" alt="Cloud lab">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="galleryModal9" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal4Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal4Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic9.png" class="img-fluid rounded-3 mb-3" alt="Cloud lab">
+    
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="galleryModal0" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal4Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal4Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic10.png" class="img-fluid rounded-3 mb-3" alt="Cloud lab">
+      
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="galleryModa11" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal4Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal4Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic11.png" class="img-fluid rounded-3 mb-3" alt="Cloud lab">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="galleryModa12" tabindex="-1" aria-hidden="true" role="dialog" aria-modal="true" data-bs-backdrop="true" data-bs-keyboard="true" aria-labelledby="galleryModal4Label">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold" id="galleryModal4Label">Tour Photo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 pb-4">
+        <img src="assets/images/pic12.png" class="img-fluid rounded-3 mb-3" alt="Cloud lab">
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="script.js" defer></script>
+
 </body>
-</html>
+</html>  

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder scanned journal page (SVG) -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600">
+  <defs>
+    <filter id="grain"><feTurbulence baseFrequency="0.8" numOctaves="1" stitchTiles="stitch" result="t"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#fbfbf7"/>
+  <rect x="48" y="48" width="1104" height="1504" rx="16" fill="#fff" stroke="#eee"/>
+  <!-- printed heading -->
+  <rect x="120" y="120" width="960" height="48" rx="6" fill="#f2f2f2"/>
+  <rect x="120" y="200" width="900" height="18" rx="4" fill="#f6f6f6"/>
+  <!-- lines -->
+  <g fill="#f3f3f3">
+    <rect x="120" y="260" width="880" height="12"/>
+    <rect x="120" y="292" width="880" height="12"/>
+    <rect x="120" y="324" width="880" height="12"/>
+    <rect x="120" y="356" width="880" height="12"/>
+  </g>
+  <!-- handwritten sample lines -->
+  <g stroke="#3b3b3b" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M140 440 q160 -18 320 6 q160 26 320 2" opacity="0.95"/>
+    <path d="M140 520 q200 -6 360 14 q200 30 360 0" opacity="0.9"/>
+    <path d="M140 600 q140 -8 300 12 q200 26 360 6" opacity="0.85"/>
+  </g>
+  <!-- footer box -->
+  <rect x="120" y="1220" width="360" height="200" rx="8" fill="#fafafa" stroke="#eee"/>
+  <g transform="translate(140,1240) scale(0.9)" fill="#bdbdbd" font-family="Poppins, Arial, sans-serif" font-size="18">
+    <text x="0" y="20">Observation:</text>
+    <text x="0" y="60">Learnings and notes from the visit.</text>
+  </g>
+</svg>
